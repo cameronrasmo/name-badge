@@ -98,7 +98,7 @@ class App extends React.Component {
 
     onload = () => {
         this.h1ref.current.style.opacity = "1";
-        this.h1ref.current.style.top = "450px";
+        this.h1ref.current.style.top = "0px";
     };
 
     render() {
@@ -115,10 +115,6 @@ class App extends React.Component {
         ));
         return (
             <div onLoad={this.onload} id='container'>
-                <img id='emoji' src='Untitled.png' alt='emoji'></img>
-                <h3 id='add' onClick={this.transitionPanel}>
-                    + add another
-                </h3>
                 <div
                     id='form-container'
                     ref={(this.formRef = React.createRef())}
@@ -204,6 +200,12 @@ class App extends React.Component {
                             submit
                         </button>
                     </form>
+                </div>
+                <div id='emoji-container'>
+                    <img id='emoji' src='Untitled.png' alt='emoji'></img>
+                    <h3 id='add' onClick={this.transitionPanel}>
+                        + add another
+                    </h3>
                 </div>
                 <div id='badge-container'>
                     <h1 ref={(this.h1ref = React.createRef())}>Name Badge</h1>
